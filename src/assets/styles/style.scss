@@ -1,0 +1,569 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+@import url(https://use.fontawesome.com/releases/v5.5.0/css/all.css);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#wrapper-logout, #wrapper {
+  background: #86A8E7;
+  background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100vw;
+
+  .login-page {
+    width: 360px;
+    padding: 8% 0 0;
+    margin: auto;
+  }
+
+  .form {
+    position: relative;
+    z-index: 1;
+    background: #FFFFFF;
+    max-width: 360px;
+    margin: 0 auto 100px;
+    padding: 45px;
+    text-align: center;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+  }
+
+  .form input {
+    font-family: "Roboto", sans-serif;
+    outline: 0;
+    background: #f2f2f2;
+    width: 100%;
+    border: 0;
+    margin: 0 0 15px;
+    padding: 15px;
+    box-sizing: border-box;
+    font-size: 14px;
+  }
+
+  .form button {
+    font-family: "Roboto", sans-serif;
+    text-transform: uppercase;
+    outline: 0;
+    background: #86A8E7;
+    width: 100%;
+    border: 0;
+    padding: 15px;
+    color: #FFFFFF;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+
+  .form button:hover, .form button:active, .form button:focus {
+    background: #86A8E7;
+  }
+
+  .form .message {
+    margin: 15px 0 0;
+    color: #b3b3b3;
+    font-size: 12px;
+  }
+
+  .form .message a {
+    color: #86A8E7;
+    text-decoration: none;
+  }
+
+  .form .register-form {
+    display: none;
+  }
+
+  .container {
+    position: relative;
+    z-index: 1;
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .container:before, .container:after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+
+  .container .info {
+    margin: 50px auto;
+    text-align: center;
+  }
+
+  .container .info h1 {
+    margin: 0 0 15px;
+    padding: 0;
+    font-size: 36px;
+    font-weight: 300;
+    color: #1a1a1a;
+  }
+
+  .container .info span {
+    color: #4d4d4d;
+    font-size: 12px;
+  }
+
+  .container .info span a {
+    color: #000000;
+    text-decoration: none;
+  }
+
+  .container .info span .fa {
+    color: #EF3B3A;
+  }
+
+  .remember {
+    display: flex;
+    font-size: 15px;
+    justify-content: center;
+    padding: 15px;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+
+    input[type='checkbox'] {
+      width: auto;
+      margin: 0 10px 0 0;
+    }
+  }
+}
+
+#wrapper {
+  margin: 0;
+  background: #7F7FD5;
+  background: -webkit-linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);
+  background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);
+  height: 100vh;
+  overflow: auto;
+
+  .chat {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  .card {
+    height: 500px;
+    border-radius: 15px !important;
+    background-color: rgba(0, 0, 0, 0.4) !important;
+  }
+
+  .contacts_body {
+    padding: 0.75rem 0 !important;
+    overflow-y: auto;
+    white-space: nowrap;
+  }
+
+  .msg_card_body {
+    overflow-y: auto;
+  }
+
+  .card-header {
+    border-radius: 15px 15px 0 0 !important;
+    border-bottom: 0 !important;
+  }
+
+  .card-footer {
+    border-radius: 0 0 15px 15px !important;
+    border-top: 0 !important;
+    position: relative;
+  }
+
+  .container {
+    align-content: center;
+  }
+
+  .search {
+    border-radius: 15px 0 0 15px !important;
+    background-color: rgba(0, 0, 0, 0.3) !important;
+    border: 0 !important;
+    color: white !important;
+  }
+
+  .search:focus {
+    box-shadow: none !important;
+    outline: 0px !important;
+  }
+
+  .type_msg {
+    background-color: rgba(0, 0, 0, 0.3) !important;
+    border: 0 !important;
+    color: white !important;
+    height: 60px !important;
+    overflow-y: auto;
+    padding-top: 18px;
+  }
+
+  .type_msg:focus {
+    box-shadow: none !important;
+    outline: 0px !important;
+  }
+
+  .attach_btn {
+    border-radius: 15px 0 0 15px !important;
+    background-color: rgba(0, 0, 0, 0.3) !important;
+    border: 0 !important;
+    color: white !important;
+    cursor: pointer;
+  }
+
+  .send_btn {
+    border-radius: 0 15px 15px 0 !important;
+    background-color: rgba(0, 0, 0, 0.3) !important;
+    border: 0 !important;
+    color: white !important;
+    cursor: pointer;
+  }
+
+  .search_btn {
+    border-radius: 0 15px 15px 0 !important;
+    background-color: rgba(0, 0, 0, 0.3) !important;
+    border: 0 !important;
+    color: white !important;
+    cursor: pointer;
+  }
+
+  .contacts {
+    list-style: none;
+    padding: 0;
+  }
+
+  .contacts li {
+    width: 100% !important;
+    padding: 5px 10px;
+    margin-bottom: 15px !important;
+  }
+
+  .active {
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  .user_img {
+    height: 70px;
+    width: 70px;
+    border: 1.5px solid #f5f6fa;
+
+  }
+
+  .user_img_msg {
+    height: 40px;
+    width: 40px;
+    border: 1.5px solid #f5f6fa;
+
+  }
+
+  .img_cont {
+    position: relative;
+    height: 70px;
+    width: 70px;
+  }
+
+  .img_cont_msg {
+    height: 40px;
+    width: 40px;
+  }
+
+  .online_icon {
+    position: absolute;
+    height: 15px;
+    width: 15px;
+    background-color: #4cd137;
+    border-radius: 50%;
+    bottom: 0.2em;
+    right: 0.4em;
+    border: 1.5px solid white;
+  }
+
+  .offline {
+    background-color: #c23616 !important;
+  }
+
+  .user_info {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 15px;
+  }
+
+  .user_info span {
+    font-size: 20px;
+    color: white;
+  }
+
+  .user_info p {
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  .video_cam {
+    margin-left: 50px;
+    margin-top: 5px;
+  }
+
+  .video_cam span {
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    margin-right: 20px;
+  }
+
+  .msg_cotainer {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 10px;
+    border-radius: 25px;
+    background-color: #82ccdd;
+    padding: 10px;
+    position: relative;
+    min-width: 140px;
+    display: flex;
+    flex-direction: column;
+    max-width: 50%;
+  }
+
+  .msg_cotainer_send {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 10px;
+    border-radius: 25px;
+    background-color: #78e08f;
+    padding: 10px;
+    position: relative;
+    min-width: 140px;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    max-width: 50%;
+    align-items: flex-end;
+  }
+
+  .msg_time {
+    position: absolute;
+    left: 0;
+    bottom: -15px;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 10px;
+  }
+
+  .msg_time_send {
+    position: absolute;
+    right: 0;
+    bottom: -15px;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 10px;
+  }
+
+  .msg_head {
+    position: relative;
+  }
+
+  #action_menu_btn {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+  }
+
+  .log-out{
+    border-radius: 15px;
+    background-color: rgba(0, 0, 0, 0.3) !important;
+    border: 0 !important;
+    color: white !important;
+    padding: 10px;
+    margin-top: 10px;
+    outline: 0;
+    cursor: pointer;
+    transition: all .4s;
+    &:hover{
+      background-color: rgba(0, 0, 0, 0.6) !important;
+    }
+  }
+
+  .msg-send-img, .msg-send-audio, .msg-send-video {
+    width: 220px;
+  }
+
+  .msg-text {
+    margin-bottom: 0;
+  }
+
+  .upload-file-wrapper {
+    display: flex;
+    overflow-y: scroll;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .upload-progress {
+    width: 100%;
+    margin-bottom: 10px;
+
+    > div {
+      height: 2px;
+      background-color: red;
+    }
+  }
+
+  .upload-file {
+    position: relative;
+    border: 1px solid black;
+    width: fit-content;
+    padding: 5px;
+    display: flex;
+    min-width: max-content;
+    margin: 10px 5px;
+
+    &-text {
+      margin: 0;
+      color: #fff3cd;
+    }
+
+    &-close {
+      margin: 0 0 0 5px;
+      color: #681919;
+      cursor: pointer;
+      transition: all .4s;
+
+      &:hover {
+        color: #ff0000;
+      }
+    }
+
+    &-link {
+      border: 1px solid black;
+      padding: 10px;
+    }
+  }
+
+  .emoji {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.3) !important;
+
+    &-btn {
+      cursor: pointer;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: transparent;
+      height: 100%;
+
+      &:hover ~ .emoji-picker {
+        display: block;
+      }
+    }
+
+    &-picker {
+      display: none;
+      position: absolute;
+      bottom: 60%;
+      left: 0;
+
+      &:hover {
+        display: block;
+      }
+    }
+  }
+
+  .btn-voice {
+    background-color: rgba(0, 0, 0, 0.3) !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 3px 0 8px;
+    cursor: pointer;
+  }
+
+  @media(max-width: 576px) {
+    .contacts_card {
+      margin-bottom: 15px !important;
+    }
+  }
+}
+
+
+
+//recording animation
+.record-anim-box {
+  position: relative;
+  width: max-content;
+  height: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 20px 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+.record-anim-span {
+  display: block;
+  bottom: 0;
+  width: 9px;
+  height: 5px;
+  background: #9b59b6;
+  animation: audio-wave 1.5s infinite ease-in-out;
+}
+
+.record-anim-span:nth-child(2) {
+  left: 11px;
+  animation-delay: 0.2s;
+}
+
+.record-anim-span:nth-child(3) {
+  left: 22px;
+  animation-delay: 0.4s;
+}
+
+.record-anim-span:nth-child(4) {
+  left: 33px;
+  animation-delay: 0.6s;
+}
+
+.record-anim-span:nth-child(5) {
+  left: 44px;
+  animation-delay: 0.8s;
+}
+.record-anim-span:nth-child(6) {
+  left: 55px;
+  animation-delay: 1s;
+}
+
+.record-anim-span:nth-child(7) {
+  left: 66px;
+  animation-delay: 1.2s;
+}
+
+.record-anim-span:nth-child(8) {
+  left: 77px;
+  animation-delay: 1.4s;
+}
+
+.record-anim-span:nth-child(9) {
+  left: 88px;
+  animation-delay: 1.6s;
+}
+.record-anim-span:nth-child(10) {
+  left: 99px;
+  animation-delay: 1.8s;
+}
+
+@keyframes audio-wave {
+  0% {height:5px;transform:translateY(0px);background:#9b59b6;}
+  25% {height:40px;transform:translateY(20px);background:#3498db;}
+  /*effect is to animate the height of each span from 5px to 30px*/
+  /*translateY makes Y axis move down to give the effect that it is growing from the center*/
+
+  50% {height:5px;transform:translateY(0px);background:#9b59b6;}
+  100% {height:5px;transform:translateY(0px);background:#9b59b6;}
+}
+
+
